@@ -21,13 +21,43 @@ module.exports = function (grunt) {
         },
         copy: {
             main: {
-                files: [{
-                    expand: true,
-                    src: 'src/components/**/*.html',
-                    dest: 'build/templates',
-                    flatten: true,
-                    filter: 'isFile'
-                }, {expand: true, src: 'src/index.html', dest: 'build/', flatten: true, filter: 'isFile'}]
+                files: [
+                    {
+                        expand: true,
+                        src: 'src/components/**/*.html',
+                        dest: 'build/templates',
+                        flatten: true,
+                        filter: 'isFile'
+                    },
+                    {
+                        expand: true,
+                        src: 'src/index.html',
+                        dest: 'build/',
+                        flatten: true,
+                        filter: 'isFile'
+                    },
+                    {
+                        expand: true,
+                        src: 'vendor/systemjs/dist/system.js',
+                        dest: 'build/libs',
+                        flatten: true,
+                        filter: 'isFile'
+                    },
+                    {
+                        expand: true,
+                        src: 'vendor/traceur-runtime/traceur-runtime.min.js',
+                        dest: 'build/libs',
+                        flatten: true,
+                        filter: 'isFile'
+                    },
+                    {
+                        expand: true,
+                        src: 'node_modules/angular2/bundles/*.dev.js',
+                        dest: 'build/libs',
+                        flatten: true,
+                        filter: 'isFile'
+                    }
+                ]
             }
         },
         delta: {

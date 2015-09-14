@@ -22,7 +22,8 @@
 
   },
   "devDependencies": {
-    "systemjs": "systemjs/systemjs#~0.16.10",
-    "es6-module-loader": "~0.16.6"
+    "systemjs": "systemjs/systemjs#~0.18.4",
+    "traceur-runtime": "~0.0.91",
+    ""
   }
 }
