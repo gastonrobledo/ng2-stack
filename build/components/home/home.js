@@ -6,7 +6,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
         case 4: return decorators.reduceRight(function(o, d) { return (d && d(target, key, o)) || o; }, desc);
     }
 };
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 var angular2_1 = require('angular2/angular2');
+var router_1 = require('angular2/router');
 var HomeComponent = (function () {
     function HomeComponent(router) {
         this.router = router;
@@ -14,11 +18,13 @@ var HomeComponent = (function () {
     }
     HomeComponent = __decorate([
         angular2_1.Component({
-            selector: 'home'
+            selector: 'home',
+            injectables: [router_1.Router]
         }),
         angular2_1.View({
             templateUrl: 'templates/home.html'
-        })
+        }), 
+        __metadata('design:paramtypes', [router_1.Router])
     ], HomeComponent);
     return HomeComponent;
 })();

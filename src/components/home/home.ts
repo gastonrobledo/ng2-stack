@@ -1,8 +1,9 @@
-import {Component, View} from 'angular2/angular2';
+import {Component, View, Inject} from 'angular2/angular2';
 import { Router} from 'angular2/router';
 
 @Component({
-    selector: 'home'
+    selector: 'home',
+    injectables: [Router]
 })
 @View({
     templateUrl: 'templates/home.html'

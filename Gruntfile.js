@@ -8,24 +8,22 @@ module.exports = function (grunt) {
     grunt.initConfig({
         typescript: {
             base: {
-                src: ['typings/tsd.d.ts', 'src/components/*.ts', 'src/bootstrap.ts'],
+                src: ['typings/tsd.d.ts', 'src/components/*.ts', 'src/app.ts'],
                 dest: 'build',
                 options: {
                     target: 'ES5',
                     module: 'commonjs',
                     sourceMap: true,
-                    experimentalDecorators: true
+                    experimentalDecorators: true,
+                    emitDecoratorMetadata: true
                 }
-            },
-            options: {
-                livereload: true
             }
         },
         copy: {
             main: {
                 files: [{
                     expand: true,
-                    src: 'src/**/*.html',
+                    src: 'src/components/**/*.html',
                     dest: 'build/templates',
                     flatten: true,
                     filter: 'isFile'
@@ -44,8 +42,8 @@ module.exports = function (grunt) {
             },
 
             typescript: {
-                files: ['typings/tsd.d.ts', 'src/components/*.ts', 'src/bootstrap.ts'],
-                tasks: [ 'typescript' ],
+                files: ['typings/tsd.d.ts', 'src/components/*.ts', 'src/app.ts'],
+                tasks: [ 'build' ],
                 options: {
                     livereload: true
                 }
@@ -71,6 +69,6 @@ module.exports = function (grunt) {
     grunt.renameTask( 'watch', 'delta' );
 
     grunt.registerTask("default", ["typescript"]);
-    grunt.registerTask("build", ["typescript"]);
+    grunt.registerTask("build", ["typescript", "copy"]);
     grunt.registerTask("watch", [ "build", "express:dev", "delta"] );
 };
