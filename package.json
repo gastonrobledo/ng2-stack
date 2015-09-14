@@ -1,0 +1,24 @@
+{
+  "name": "Starter_NG2",
+  "version": "0.0.1",
+  "description": "Angular 2.0 Starter Stack",
+  "keywords": [
+    "Angular2",
+    "TypeScript"
+  ],
+  "author": "Gaston Robledo",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "devDependencies": {
+    "body-parser": "^1.13.3",
+    "express": "^4.13.3",
+    "grunt": "^0.4.5",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-express-server": "^0.5.1",
+    "grunt-typescript": "~0.7.0"
+  },
+  "dependencies": {
+    "grunt-contrib-copy": "^0.8.1"
+  }
+}

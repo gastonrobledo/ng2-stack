@@ -1,0 +1,28 @@
+{
+  "name": "Starter_NG2",
+  "version": "0.0.1",
+  "description": "Angular 2.0 Starter Stack",
+  "authors": [
+    "Gaston Robledo <gastonrobledo@gmail.com>"
+  ],
+  "keywords": [
+    "Angular2",
+    "TypeScript",
+    "Boilerplate"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+
+  },
+  "devDependencies": {
+    "systemjs": "systemjs/systemjs#~0.16.10",
+    "es6-module-loader": "~0.16.6"
+  }
+}

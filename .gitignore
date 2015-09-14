@@ -1,0 +1,6 @@
+bower_components/
+node_modules/
+.tmp/
+*.iml
+app/**/*.js
+app/**/*.js.map
