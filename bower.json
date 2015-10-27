@@ -23,7 +23,6 @@
   },
   "devDependencies": {
     "systemjs": "systemjs/systemjs#~0.18.4",
-    "traceur-runtime": "~0.0.91",
-    ""
+    "traceur-runtime": "~0.0.91"
   }
 }
